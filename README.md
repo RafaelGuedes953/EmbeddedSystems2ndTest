@@ -8,7 +8,7 @@ Construa um circuito com portas lógicas que permitam modificar as saídas quand
 ~~~VHDL
 // Questão 01 em vhdl
 
-library iee;
+library ieee;
 use ieee.std_logic_1164.all;
 
 entity portaNegada is

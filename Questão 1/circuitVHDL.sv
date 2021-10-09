@@ -1,6 +1,6 @@
 // Questão 01 em vhdl
 
-library iee;
+library ieee;
 use ieee.std_logic_1164.all;
 
 entity portaNegada is
