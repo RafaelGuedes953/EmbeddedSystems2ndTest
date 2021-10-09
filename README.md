@@ -2,11 +2,11 @@
 Construa um circuito com portas lógicas que permitam modificar as saídas quando processadas. O circuito deverá receber como entrada um registrador A e B e a resposta deverá ser armazenada em X. A Saída deverá inverter o resultado do processamento. Após a construção do circuito, codifique-o usando VHDL.
 
 
-	![circuit](https://user-images.githubusercontent.com/50843143/136636452-e031927b-ce8d-40ac-aa8b-ed0e0dab3b03.png)
+![circuit](https://user-images.githubusercontent.com/50843143/136636452-e031927b-ce8d-40ac-aa8b-ed0e0dab3b03.png)
 
 
 ~~~VHDL
-// Questão 01 em vhdl
+//Questão 01 em vhdl
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -65,8 +65,6 @@ int main(){
 	x = !(!((a&&b) || (a||b)));
 	
 	if(x==true) printf("\n\tTrue"); else printf("\nFalse");
-	
-	//print("%")
 	
 	return 0;
 }
