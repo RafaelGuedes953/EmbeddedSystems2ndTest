@@ -1,0 +1,15 @@
+fn main(){
+    
+    let a = vec![false,false,true,true];
+    let b = vec![false,true,false,true];
+    let mut x = Vec::<bool>::new();
+    
+    println!("A | B | X");
+    
+    for i in 0..4 {
+        x.push(!(!((a[i]&&b[i]) || (a[i]||b[i])))); //circuito
+        println!("{} | {} | {}", match a[i] { true => 1, false => 0},
+                                 match b[i] { true => 1, false => 0},
+                                 match x[i] { true => 1, false => 0});
+    }
+}

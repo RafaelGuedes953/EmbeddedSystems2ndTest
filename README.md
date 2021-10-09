@@ -2,7 +2,7 @@
 Construa um circuito com portas lógicas que permitam modificar as saídas quando processadas. O circuito deverá receber como entrada um registrador A e B e a resposta deverá ser armazenada em X. A Saída deverá inverter o resultado do processamento. Após a construção do circuito, codifique-o usando VHDL.
 
 
-![circuit](https://user-images.githubusercontent.com/50843143/136636452-e031927b-ce8d-40ac-aa8b-ed0e0dab3b03.png)
+	![circuit](https://user-images.githubusercontent.com/50843143/136636452-e031927b-ce8d-40ac-aa8b-ed0e0dab3b03.png)
 
 
 ~~~VHDL
@@ -25,7 +25,21 @@ end question;
 # Questão 2
 Codifique o circuito desenvolvido na questão 1 em linguagem de programação Rust.
 ~~~Rust
-
+fn main(){
+    
+    let a = vec![false,false,true,true];
+    let b = vec![false,true,false,true];
+    let mut x = Vec::<bool>::new();
+    
+    println!("A | B | X");
+    
+    for i in 0..4 {
+        x.push(!(!((a[i]&&b[i]) || (a[i]||b[i])))); //circuito
+        println!("{} | {} | {}", match a[i] { true => 1, false => 0},
+                                 match b[i] { true => 1, false => 0},
+                                 match x[i] { true => 1, false => 0});
+    }
+}
 ~~~
 
 
